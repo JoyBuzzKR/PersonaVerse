@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MBTI Chat</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(MBTI_bgr_pic_2.webp);
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            font-family: 'Comic Neue', sans-serif;
+            position: relative;
+            min-height: 100vh;
+        }
+        header, footer {
+            text-align: center;
+            margin: 2rem 0;
+            color: #fff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        main.container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            justify-items: center;
+            padding: 2rem;
+        }
+        button {
+            width: 80%; /* Reduced width by 20% */
+            padding: 0.8rem; /* Reduced padding for a smaller button size */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        /* Softer, More Refined Button Colors */
+        button:nth-child(1) { background-color: #FF9999; }
+        button:nth-child(2) { background-color: #FFB380; }
+        button:nth-child(3) { background-color: #FFD966; }
+        button:nth-child(4) { background-color: #A3E1A4; }
+        button:nth-child(5) { background-color: #99CCFF; }
+        button:nth-child(6) { background-color: #9999FF; }
+        button:nth-child(7) { background-color: #D1B3FF; }
+        button:nth-child(8) { background-color: #FFB3D1; }
+        button:nth-child(9) { background-color: #FF8A80; }
+        button:nth-child(10) { background-color: #FFB199; }
+        button:nth-child(11) { background-color: #FFE680; }
+        button:nth-child(12) { background-color: #A1E1CB; }
+        button:nth-child(13) { background-color: #99FFCC; }
+        button:nth-child(14) { background-color: #CC99FF; }
+        button:nth-child(15) { background-color: #FFD1D1; }
+        button:nth-child(16) { background-color: #FFCCE8; }
+
+        /* Idea Submission Button */
+        #idea-button {
+            position: fixed;
+            width: 10%;
+            bottom: 20px;
+            right: 20px;
+            padding: 0.5rem 1rem;
+            background-color: #5865F2;
+            color: #fff;
+            border: none;
+            border-radius: 20%;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        #idea-button:hover {
+            background-color: #4752C4;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            main.container {
+                grid-template-columns: 1fr; /* Single column layout */
+                gap: 1rem; /* Reduced gap between buttons */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to MBTI Chat, chat with any MBTI you want</h1>
+    </header>
+    <main class="container">
+        <button>INTJ</button>
+        <button>INTP</button>
+        <button>ENTJ</button>
+        <button>ENTP</button>
+        <button>INFJ</button>
+        <button>INFP</button>
+        <button>ENFJ</button>
+        <button>ENFP</button>
+        <button>ISTJ</button>
+        <button>ISFJ</button>
+        <button>ESTJ</button>
+        <button>ESFJ</button>
+        <button>ISTP</button>
+        <button>ISFP</button>
+        <button>ESTP</button>
+        <button>ESFP</button>
+    </main>
+    <footer>
+        <small>© 2024 MBTI Chat. All rights reserved.</small>
+    </footer>
+
+    <button id="idea-button" onclick="window.location.href='mailto:developer@example.com?subject=MBTI%20Chat%20Idea'">Send Your Idea</button>
+</body>
+</html>
